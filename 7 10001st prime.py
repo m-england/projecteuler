@@ -12,7 +12,6 @@ def isPrime(n):
 while curr_prime < which_prime:
     if isPrime(i):
         curr_prime += 1
-        #print str(i) + " was prime #" + str(curr_prime)
         
     i += 1
         
