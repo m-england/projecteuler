@@ -1,5 +1,3 @@
-import math
-
 def d(n):
     total = 0
     for i in n:
@@ -14,20 +12,20 @@ def find_divisors(n):
     return divisors
 
 def find_amicables(x,y):
-    
+    if (y > len(allsums)):
+        return
+    if (allsums[y] == x and y != x):
+        amicables.append(x)
+        amicables.append(y)
 
 amicables = []
 allsums = [0]
 
-for i in range(1,10):
+for i in range(1,10000):
     total = d(find_divisors(i))
-    print find_amicables(total)
-    
     allsums.append(total)
-
-    print find_amicables(total) 
-
+    find_amicables(i, total)
 
 print "List of amicables: ",
 print amicables
-#print d(amicables)
+print d(amicables)
